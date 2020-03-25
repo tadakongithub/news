@@ -4,3 +4,4 @@ export const fetchNewsReducer = (state = [], action) => {
     }
     return state;
 }
+
