@@ -1,0 +1,1 @@
+{"version":3,"sources":["NewsList.css","EachNews.css"],"names":[],"mappings":"AAAA,WACI,gBACJ,CCFA,uBACI,qBAAsB,CACtB,aACJ,CAEA,0CACI,QACJ","file":"main.a3685d27.chunk.css","sourcesContent":["#news_list{\n    margin: 20px auto;\n}",".back_button.ui.button{\n    background-color: #fff;\n    color: #B03060;\n}\n\n.ui.red.seconday.borderless.inverted.menu{\n    margin: 0;\n}"]}
