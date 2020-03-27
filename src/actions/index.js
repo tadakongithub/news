@@ -1,5 +1,6 @@
 import newsapi from '../apis/newsapi';
 
+
 export const fetchNews = (string) => {
     return async (dispatch, getState) => {
         //get today's date
@@ -21,16 +22,3 @@ export const handleTypingSearchString = (string) => {
     }
 }
 
-export const showEachNews = (news) => {
-    return {
-        type: 'SHOW_EACH_NEWS',
-        payload: news
-    }
-}
-
-export const toggleBetweenListAndEachNews = (list_or_eachNews) => {
-    return {
-        type: 'TOGGLE_BETWEEN_LIST_AND_EACHNEWS',
-        payload: list_or_eachNews
-    }
-}

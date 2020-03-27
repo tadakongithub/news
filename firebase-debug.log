@@ -1,0 +1,59 @@
+[debug] [2020-03-27T02:35:36.351Z] ----------------------------------------------------------------------
+[debug] [2020-03-27T02:35:36.353Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-03-27T02:35:36.353Z] CLI Version:   7.16.1
+[debug] [2020-03-27T02:35:36.353Z] Platform:      darwin
+[debug] [2020-03-27T02:35:36.353Z] Node Version:  v12.13.1
+[debug] [2020-03-27T02:35:36.354Z] Time:          Thu Mar 26 2020 19:35:36 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-03-27T02:35:36.354Z] ----------------------------------------------------------------------
+[debug] [2020-03-27T02:35:36.354Z] 
+[debug] [2020-03-27T02:35:36.364Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-27T02:35:36.365Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/tadashikonno/news
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using tada-news.
+[debug] [2020-03-27T02:35:38.171Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-03-27T02:35:38.171Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-03-27T02:35:38.467Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-27T02:35:38.478Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tada-news  
+ 
+[debug] [2020-03-27T02:35:39.215Z] <<< HTTP RESPONSE 500
+[debug] [2020-03-27T02:35:39.216Z] <<< HTTP RESPONSE BODY
+[debug] [2020-03-27T02:35:39.219Z] HTTP Error: 500, Internal error encountered.
+[debug] [2020-03-27T02:35:39.431Z] FirebaseError: HTTP Error: 500, Internal error encountered.
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:40:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:299:28)
+    at IncomingMessage.emit (events.js:215:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1184:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to get Firebase project tada-news. Please make sure the project exists and your account has permission to access it.

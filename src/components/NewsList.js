@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchNews, handleTypingSearchString, showEachNews, toggleBetweenListAndEachNews } from '../actions';
+import { fetchNews, handleTypingSearchString } from '../actions';
 import { connect } from 'react-redux';
 import './NewsList.css';
 
@@ -9,7 +9,6 @@ class NewsList extends React.Component{
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleClick = this.handleClick.bind(this);
     }
 
     handleChange(e){
@@ -21,20 +20,28 @@ class NewsList extends React.Component{
         this.props.fetchNews(this.props.searchString);
     }
 
-    handleClick(eachNews){
-        this.props.showEachNews(eachNews);
-        this.props.toggleBetweenListAndEachNews('eachNews');
-    }
+
 
     renderList(){
         return this.props.news.map( (eachNews, index) => {
+            const image = () => {
+                if(eachNews.urlToImage !== null){
+                    return <img className="ui fluid image" src={eachNews.urlToImage}/>
+                } else {
+                    return <img src="https://img.icons8.com/ultraviolet/80/000000/no-image.png"/>
+                }
+            }
             return (
-                <div className="item" key={index} onClick={() => this.handleClick(eachNews)}>
-                    <i class="newspaper icon"></i>
-                    <div className="content">
-                        <a className="header">{eachNews.title}</a>
+                <a className="ui grid anchor segment" key={index} href={eachNews.url} target="_blank" rel="noopener noreferrer">
+                    <div className="four wide column">{image()}</div>
+
+                    <div className="twelve wide column">
+                        <h3 className="ui header">{eachNews.title}</h3>
+                        <div className="ui basic segment">
+                            <div>{eachNews.description}</div>
+                        </div>
                     </div>
-                </div> 
+                </a> 
             )
         });
     }
@@ -74,4 +81,4 @@ const mapStateToProps = state => {
     return {news: state.news, searchString: state.searchString}
 }
 
-export default connect(mapStateToProps, { fetchNews, handleTypingSearchString, showEachNews, toggleBetweenListAndEachNews })(NewsList);
+export default connect(mapStateToProps, { fetchNews, handleTypingSearchString })(NewsList);
