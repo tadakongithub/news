@@ -1,0 +1,1 @@
+{"version":3,"sources":["NewsList.css"],"names":[],"mappings":"AAAA,WACI,gBACJ,CAEA,wBACI,cACJ,CAEA,gBACI,gBACJ","file":"main.090b9f0c.chunk.css","sourcesContent":["#news_list{\n    margin: 20px auto;\n}\n\n.ui.grid.anchor.segment{\n    cursor: pointer;\n}\n\n.ui.fluid.image{\n    max-height: 150px;\n}"]}
